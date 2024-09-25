@@ -1,0 +1,103 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Parallax Section */
+.parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+#section1 {
+    background-image: url('image1.jpg'); /* Add your image URL */
+}
+
+#section3 {
+    background-image: url('image2.jpg'); /* Add your image URL */
+}
+
+#section5 {
+    background-image: url('image3.jpg'); /* Add your image URL */
+}
+
+/* Content Section */
+.content-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.6s ease;
+}
+
+.content-section:hover {
+    background-color: #eaeaea;
+}
+
+.content h1, .content h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+}
+
+.content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s 0.3s, transform 1s 0.3s;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #f8b400;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #e69a00;
+    transform: scale(1.1);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* On Scroll Animations */
+.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
